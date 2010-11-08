@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<TgConfig Version="3" SubLevelDisabled="False">
+  <Option Name="namespaceFolder.DDDSample" Type="System.String" Value="DDDSample" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Domain" Type="System.String" Value="Domain" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Domain.Model" Type="System.String" Value="Domain\Model" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Domain.Model.Location" Type="System.String" Value="Domain\Model\Location" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Domain.Model.Cargo" Type="System.String" Value="Domain\Model\Cargo" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Domain.Model.Cargo.ValueObject" Type="System.String" Value="Domain\Model\Cargo\ValueObject" Category="General" IsBrowsable="False" />
+</TgConfig>

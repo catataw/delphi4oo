@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2010/11/03 20:11:02.000.156,=E:\delphi\DDDSample\Test\TestDomain.Model.pas</Transaction>
+    <Transaction>2010/11/03 20:11:02.000.796,=E:\delphi\DDDSample\Domain.Model.Cargo.pas</Transaction>
+    <Transaction>2010/11/03 20:13:31.000.312,=E:\delphi\DDDSample\Domain.Shared.pas</Transaction>
+    <Transaction>2010/11/03 21:45:19.000.953,=E:\delphi\DDDSample\Test\Unit1.pas</Transaction>
+    <Transaction>2010/11/03 22:11:56.000.296,E:\delphi\DDDSample\Domain.Model.Cargo.pas=E:\delphi\DDDSample\Domain.Model.Cargo.ValueObject.pas</Transaction>
+  </Transactions>
+</BorlandProject>
