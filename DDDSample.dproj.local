@@ -1,27 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>2010/10/27 16:51:57.000.046,=D:\Meus  Documentos\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2010/10/30 17:47:05.000.156,=D:\Meus  Documentos\RAD Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2010/10/30 17:49:17.000.406,D:\Meus  Documentos\RAD Studio\Projects\Project1.dproj=E:\delphi\DDDSample\DDDSample.dproj</Transaction>
-    <Transaction>2010/11/03 19:36:36.000.812,=E:\delphi\DDDSample\Unit1.pas</Transaction>
-    <Transaction>2010/11/03 19:37:32.000.234,E:\delphi\DDDSample\Unit1.pas=E:\delphi\DDDSample\Domain.Model.Cargo.pas</Transaction>
-    <Transaction>2010/11/03 19:38:59.000.203,=E:\delphi\DDDSample\Unit1.pas</Transaction>
-    <Transaction>2010/11/03 19:39:13.000.500,E:\delphi\DDDSample\Unit1.pas=E:\delphi\DDDSample\Domain.Shared.pas</Transaction>
-    <Transaction>2010/11/03 21:45:44.000.875,=E:\delphi\DDDSample\Unit1.pas</Transaction>
-    <Transaction>2010/11/03 21:46:42.000.578,E:\delphi\DDDSample\Unit1.pas=E:\delphi\DDDSample\Domain.Model.Location.pas</Transaction>
-    <Transaction>2010/11/03 22:11:56.000.296,E:\delphi\DDDSample\Domain.Model.Cargo.pas=E:\delphi\DDDSample\Domain.Model.Cargo.ValueObject.pas</Transaction>
-    <Transaction>2010/11/04 23:54:28.000.671,=E:\delphi\DDDSample\ModelSupport_DDDSample\default.txaPackage</Transaction>
-    <Transaction>2010/11/04 23:54:47.000.468,=E:\delphi\DDDSample\ModelSupport_DDDSample\default.txvpck</Transaction>
-    <Transaction>2010/11/04 23:57:51.000.406,=E:\delphi\DDDSample\ModelSupport_DDDSample\DDDSample\default.txvpck</Transaction>
-    <Transaction>2010/11/04 23:57:53.000.859,=E:\delphi\DDDSample\ModelSupport_DDDSample\Domain\default.txvpck</Transaction>
-    <Transaction>2010/11/04 23:57:54.000.781,=E:\delphi\DDDSample\ModelSupport_DDDSample\Domain\Model\default.txvpck</Transaction>
-    <Transaction>2010/11/04 23:57:56.000.296,=E:\delphi\DDDSample\ModelSupport_DDDSample\Domain\Shared\default.txvpck</Transaction>
-    <Transaction>2010/11/04 23:58:00.000.062,=E:\delphi\DDDSample\ModelSupport_DDDSample\Domain\Model\Location\default.txvpck</Transaction>
-    <Transaction>2010/11/04 23:58:36.000.718,=E:\delphi\DDDSample\ModelSupport_DDDSample\Domain\Model\Cargo\ValueObject\default.txvpck</Transaction>
-    <Transaction>2010/11/04 23:58:36.000.625,=E:\delphi\DDDSample\ModelSupport_DDDSample\Domain\Model\Cargo\default.txvpck</Transaction>
-    <Transaction>2010/11/04 23:58:37.000.000,=E:\delphi\DDDSample\ModelSupport_DDDSample\Domain\Model\default.txaPackage</Transaction>
-    <Transaction>2010/11/04 23:58:48.000.531,=E:\delphi\DDDSample\ModelSupport_DDDSample\Domain\Model\Cargo\default.txaPackage</Transaction>
-    <Transaction>2010/11/04 23:59:00.000.718,=E:\delphi\DDDSample\ModelSupport_DDDSample\Domain\Model\Cargo\ValueObject\default.txaPackage</Transaction>
   </Transactions>
 </BorlandProject>

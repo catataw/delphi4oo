@@ -19,9 +19,13 @@ uses
   TestFramework,
   GUITestRunner,
   TextTestRunner,
-  TestDomain.Model in 'TestDomain.Model.pas',
-  Domain.Model.Cargo.ValueObject in '..\Domain.Model.Cargo.ValueObject.pas',
-  Domain.Shared in '..\Domain.Shared.pas';
+  TestDomain.Model.Cargo in 'TestDomain.Model.Cargo.pas',
+  TestDomain.Shared in 'TestDomain.Shared.pas',
+  Domain.Shared in '..\Domain.Shared.pas',
+  Domain.Model.Cargo in '..\Domain.Model.Cargo.pas',
+  Domain.Model.Location in '..\Domain.Model.Location.pas',
+  Domain.Model.Voyage in '..\Domain.Model.Voyage.pas',
+  Domain.Service in '..\Domain.Service.pas';
 
 {$R *.RES}
 

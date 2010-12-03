@@ -51,9 +51,13 @@
 			<DelphiCompile Include="DDDSampleTests.dpr">
 				<MainSource>MainSource</MainSource>
 			</DelphiCompile>
-			<DCCReference Include="TestDomain.Model.pas"/>
-			<DCCReference Include="..\Domain.Model.Cargo.ValueObject.pas"/>
+			<DCCReference Include="TestDomain.Model.Cargo.pas"/>
+			<DCCReference Include="TestDomain.Shared.pas"/>
 			<DCCReference Include="..\Domain.Shared.pas"/>
+			<DCCReference Include="..\Domain.Model.Cargo.pas"/>
+			<DCCReference Include="..\Domain.Model.Location.pas"/>
+			<DCCReference Include="..\Domain.Model.Voyage.pas"/>
+			<DCCReference Include="..\Domain.Service.pas"/>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
@@ -111,6 +115,7 @@
 					<SourceProjectName>E:\delphi\DDDSample\DDDSample.dproj</SourceProjectName>
 					<TestFramework>DUnit / Delphi Win32</TestFramework>
 					<TestRunner>GUI</TestRunner>
+					<TestProjectName/>
 				</UnitTesting>
 			</BorlandProject>
 			<ProjectFileVersion>12</ProjectFileVersion>

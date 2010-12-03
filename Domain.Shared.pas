@@ -14,6 +14,11 @@ type
     function sameValueAs(other: T): boolean;
   end;
 
+  DomainEvent<T> = interface
+    ['{8829FB3B-3C6C-43B7-B07F-1EB649D2B77D}']
+    function sameEventAs(other: T): boolean;
+  end;
+
   Specification<T> = interface
     ['{57DAF1C4-8828-4414-A23E-4A815651592B}']
     function isSatisfiedBy(T: T): boolean;
@@ -23,6 +28,7 @@ type
   end;
 
   AbstractSpecification<T> = class(TInterfacedObject, Specification<T>)
+  public
     function isSatisfiedBy(T: T): boolean; virtual; abstract;
     function _And(Specification: Specification<T>): Specification<T>;
     function _OR(Specification: Specification<T>): Specification<T>;
@@ -30,10 +36,26 @@ type
   end;
 
   AndSpecification<T> = class(AbstractSpecification<T>)
-   private
-     FSpec1,FSpec2:Specification<T>;
-   public
-    constructor create(spec1 : Specification<T>;spec2 : Specification<T>);
+  private
+    FSpec1, FSpec2: Specification<T>;
+  public
+    constructor create(spec1: Specification<T>; spec2: Specification<T>);
+    function isSatisfiedBy(T: T): boolean; override;
+  end;
+
+  OrSpecification<T> = class(AbstractSpecification<T>)
+  private
+    FSpec1, FSpec2: Specification<T>;
+  public
+    constructor create(spec1: Specification<T>; spec2: Specification<T>);
+    function isSatisfiedBy(T: T): boolean; override;
+  end;
+
+  NotSpecification<T> = class(AbstractSpecification<T>)
+  private
+    FSpec1: Specification<T>;
+  public
+    constructor create(spec1: Specification<T>);
     function isSatisfiedBy(T: T): boolean; override;
   end;
 
@@ -43,7 +65,7 @@ implementation
 
 function AbstractSpecification<T>._And(Specification: Specification<T>): Specification<T>;
 begin
-  Result := AndSpecification<T>.Create(self, Specification)
+  Result := AndSpecification<T>.create(self, Specification)
 end;
 
 function AbstractSpecification<T>._Not(Specification: Specification<T>): Specification<T>;
@@ -66,7 +88,32 @@ end;
 
 function AndSpecification<T>.isSatisfiedBy(T: T): boolean;
 begin
-  result := FSpec1.isSatisfiedBy(t) Or FSpec2.isSatisfiedBy(t);
+  Result := FSpec1.isSatisfiedBy(T) and FSpec2.isSatisfiedBy(T);
+end;
+
+{ OrSpecification<T> }
+
+constructor OrSpecification<T>.create(spec1, spec2: Specification<T>);
+begin
+  FSpec1 := spec1;
+  FSpec2 := spec2;
+end;
+
+function OrSpecification<T>.isSatisfiedBy(T: T): boolean;
+begin
+  Result := FSpec1.isSatisfiedBy(T) Or FSpec2.isSatisfiedBy(T);
+end;
+
+{ NotSpecification<T> }
+
+constructor NotSpecification<T>.create(spec1: Specification<T>);
+begin
+  FSpec1 := spec1;
+end;
+
+function NotSpecification<T>.isSatisfiedBy(T: T): boolean;
+begin
+  Result := not FSpec1.isSatisfiedBy(T)
 end;
 
 end.

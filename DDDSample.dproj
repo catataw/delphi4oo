@@ -49,9 +49,11 @@
 			<DelphiCompile Include="DDDSample.dpr">
 				<MainSource>MainSource</MainSource>
 			</DelphiCompile>
-			<DCCReference Include="Domain.Model.Cargo.ValueObject.pas"/>
-			<DCCReference Include="Domain.Shared.pas"/>
+			<DCCReference Include="Domain.Model.Cargo.pas"/>
 			<DCCReference Include="Domain.Model.Location.pas"/>
+			<DCCReference Include="Domain.Model.Voyage.pas"/>
+			<DCCReference Include="Domain.Shared.pas"/>
+			<DCCReference Include="Domain.Service.pas"/>
 			<None Include="ModelSupport_DDDSample\default.txaPackage"/>
 			<None Include="ModelSupport_DDDSample\default.txvpck"/>
 			<None Include="ModelSupport_DDDSample\DDDSample\default.txvpck"/>
