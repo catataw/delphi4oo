@@ -1,0 +1,30 @@
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="propcf" invoke="auto">
+		<description>
+			New property using code for reading and a field for writing
+		</description>
+		<author>
+			Cobus Kruger
+		</author>
+		<point name="PropName">
+			<text>
+				PropertyName
+			</text>
+			<hint>
+				Name of the property
+			</hint>
+		</point>
+		<point name="TypeName">
+			<text>
+				TypeName
+			</text>
+			<hint>
+				Data type of the property
+			</hint>
+		</point>
+		<code language="Delphi" delimiter="|"><![CDATA[property |PropName|: |TypeName| read Get|PropName| write F|PropName|;
+|end|]]>
+		</code>
+	</template>
+</codetemplate>

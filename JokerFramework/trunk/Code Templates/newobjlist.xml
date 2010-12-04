@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="NewObjList" invoke="manual">
+		<description>
+			New type-safe TObjectList wrapper
+		</description>
+		<author>
+			Cobus Kruger
+		</author>
+		<point name="listclass">
+			<text>
+				TListClass
+			</text>
+			<hint>
+				Name of a class with a default array property and a Count property
+			</hint>
+		</point>
+		<point name="itemclass">
+			<text>
+				TListItemClass
+			</text>
+			<hint>
+				Return type of the default array property
+			</hint>
+		</point>
+		<code language="Delphi" delimiter="|"><![CDATA[|*||listclass| = class
+|*|private
+|*||*|FList: TObjectList;
+|*||*|function GetItem(Index: Integer): |itemclass|;
+|*||*|procedure SetItem(Index: Integer; const Value: |itemclass|);
+|*||*|procedure SetOwnsObjects(const Value: Boolean);
+|*||*|function GetOwnsObjects: Boolean;
+|*||*|function GetCount: Integer;
+{$region '|*||*|Private eunumerator class'}
+|*||*|type
+|*||*||*||itemclass|Enumerator = record
+|*||*||*|private
+|*||*||*||*|FIndex: Integer;
+|*||*||*||*|FOwner: |listclass|;
+|*||*||*|public
+|*||*||*||*|function GetCurrent: |itemclass|; inline;
+|*||*||*||*|function MoveNext: Boolean; inline;
+|*||*||*||*|property Current: |itemclass| read GetCurrent;
+
+|*||*||*||*|constructor Create(AOwner: |listclass|);
+|*||*||*|end;
+{$endregion}
+|*|public
+|*||*|property OwnsObjects: Boolean read GetOwnsObjects write SetOwnsObjects;
+|*||*|property Items[Index: Integer]: |itemclass| read GetItem write SetItem; default;
+|*||*|property Count: Integer read GetCount;
+
+|*||*|function Add(AObject: |itemclass|): Integer;
+|*||*|function Extract(Item: |itemclass|): |itemclass|;
+|*||*|function Remove(AObject: |itemclass|): Integer;
+|*||*|function IndexOf(AObject: |itemclass|): Integer;
+|*||*|function FindInstanceOf(AClass: TClass; AExact: Boolean = True; AStartAt: Integer = 0): Integer;
+|*||*|procedure Insert(Index: Integer; AObject: |itemclass|);
+|*||*|function First: |itemclass|;
+|*||*|function Last: |itemclass|;
+|*||*|procedure Clear;
+
+|*||*|function GetEnumerator: |itemclass|Enumerator;
+
+|*||*|constructor Create;
+|*||*|destructor Destroy; override;
+|*|end;
+
+// Move everything from here to the end of |listclass|.|itemclass|Enumerator.MoveNext to the
+// implementation section
+{ |listclass| }
+
+function |listclass|.Add(AObject: |itemclass|): Integer;
+begin
+|*|Result := FList.Add(AObject);
+end;
+
+function |listclass|.GetCount: Integer;
+begin
+|*|Result := FList.Count;
+end;
+
+constructor |listclass|.Create;
+begin
+|*|inherited Create;
+
+|*|FList := TObjectList.Create(False);
+end;
+
+destructor |listclass|.Destroy;
+begin
+|*|FList.Free;
+
+|*|inherited;
+end;
+
+procedure |listclass|.Clear;
+begin
+|*|FList.Clear;
+end;
+
+function |listclass|.GetItem(Index: Integer): |itemclass|;
+begin
+|*|Result := FList.Items[Index] as |itemclass|;
+end;
+
+procedure |listclass|.SetItem(Index: Integer;
+  const Value: |itemclass|);
+begin
+|*|FList.Items[Index] := Value;
+end;
+
+function |listclass|.GetOwnsObjects: Boolean;
+begin
+|*|Result := FList.OwnsObjects;
+end;
+
+procedure |listclass|.SetOwnsObjects(const Value: Boolean);
+begin
+|*|FList.OwnsObjects := Value;
+end;
+
+function |listclass|.GetEnumerator: |itemclass|Enumerator;
+begin
+|*|Result := |itemclass|Enumerator.Create(Self);
+end;
+
+function |listclass|.Extract(Item: |itemclass|): |itemclass|;
+begin
+|*|Result := FList.Extract(Item) as |itemclass|;
+end;
+
+function |listclass|.FindInstanceOf(AClass: TClass; AExact: Boolean;
+|*|AStartAt: Integer): Integer;
+begin
+|*|Result := FList.FindInstanceOf(AClass, AExact, AStartAt);
+end;
+
+function |listclass|.First: |itemclass|;
+begin
+|*|Result := FList.First as |itemclass|;
+end;
+
+function |listclass|.IndexOf(AObject: |itemclass|): Integer;
+begin
+|*|Result := FList.IndexOf(AObject);
+end;
+
+procedure |listclass|.Insert(Index: Integer; AObject: |itemclass|);
+begin
+|*|FList.Insert(Index, AObject);
+end;
+
+function |listclass|.Last: |itemclass|;
+begin
+|*|Result := FList.Last as |itemclass|;
+end;
+
+function |listclass|.Remove(AObject: |itemclass|): Integer;
+begin
+|*|Result := FList.Remove(AObject);
+end;
+
+{ |listclass|.|itemclass|Enumerator }
+
+constructor |listclass|.|itemclass|Enumerator.Create(AOwner: |listclass|);
+begin
+|*|FIndex := -1;
+|*|FOwner := AOwner;
+end;
+
+function |listclass|.|itemclass|Enumerator.GetCurrent: |itemclass|;
+begin
+|*|Result := |itemclass|(FOwner[FIndex]);
+end;
+
+function |listclass|.|itemclass|Enumerator.MoveNext: Boolean;
+begin
+|*|Result := FIndex < FOwner.Count - 1;
+|*|if Result then
+|*||*|Inc(FIndex);
+end;
+]]>
+		</code>
+	</template>
+</codetemplate>

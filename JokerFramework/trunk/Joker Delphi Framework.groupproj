@@ -1,0 +1,72 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{8DD53C47-24B4-4076-84B0-84B743F5EB95}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="Packages\JCore.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Packages\JDataBaseDBX.dproj">
+				<Dependencies>Packages\JCore.dproj</Dependencies>
+			</Projects>
+			<Projects Include="test\JokerFrameworkTests.dproj">
+				<Dependencies>Packages\JDataBaseDBX.dproj;Packages\JCore.dproj</Dependencies>
+			</Projects>
+			<Projects Include="Demo\Demo.dproj">
+				<Dependencies>Packages\JCore.dproj</Dependencies>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="JCore">
+			<MSBuild Projects="Packages\JCore.dproj"/>
+		</Target>
+		<Target Name="JCore:Clean">
+			<MSBuild Targets="Clean" Projects="Packages\JCore.dproj"/>
+		</Target>
+		<Target Name="JCore:Make">
+			<MSBuild Targets="Make" Projects="Packages\JCore.dproj"/>
+		</Target>
+		<Target DependsOnTargets="JCore" Name="JDataBaseDBX">
+			<MSBuild Projects="Packages\JDataBaseDBX.dproj"/>
+		</Target>
+		<Target DependsOnTargets="JCore:Clean" Name="JDataBaseDBX:Clean">
+			<MSBuild Targets="Clean" Projects="Packages\JDataBaseDBX.dproj"/>
+		</Target>
+		<Target DependsOnTargets="JCore:Make" Name="JDataBaseDBX:Make">
+			<MSBuild Targets="Make" Projects="Packages\JDataBaseDBX.dproj"/>
+		</Target>
+		<Target DependsOnTargets="JDataBaseDBX;JCore" Name="JokerFrameworkTests">
+			<MSBuild Projects="test\JokerFrameworkTests.dproj"/>
+		</Target>
+		<Target DependsOnTargets="JDataBaseDBX:Clean;JCore:Clean" Name="JokerFrameworkTests:Clean">
+			<MSBuild Targets="Clean" Projects="test\JokerFrameworkTests.dproj"/>
+		</Target>
+		<Target DependsOnTargets="JDataBaseDBX:Make;JCore:Make" Name="JokerFrameworkTests:Make">
+			<MSBuild Targets="Make" Projects="test\JokerFrameworkTests.dproj"/>
+		</Target>
+		<Target DependsOnTargets="JCore" Name="Demo">
+			<MSBuild Projects="Demo\Demo.dproj"/>
+		</Target>
+		<Target DependsOnTargets="JCore:Clean" Name="Demo:Clean">
+			<MSBuild Targets="Clean" Projects="Demo\Demo.dproj"/>
+		</Target>
+		<Target DependsOnTargets="JCore:Make" Name="Demo:Make">
+			<MSBuild Targets="Make" Projects="Demo\Demo.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="JCore;JDataBaseDBX;JokerFrameworkTests;Demo"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="JCore:Clean;JDataBaseDBX:Clean;JokerFrameworkTests:Clean;Demo:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="JCore:Make;JDataBaseDBX:Make;JokerFrameworkTests:Make;Demo:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>

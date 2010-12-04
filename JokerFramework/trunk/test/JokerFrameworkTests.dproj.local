@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2010/04/18 16:22:35.921.pas,E:\delphi\JokerFramework\Source\DataAcessLayer\DataBase.Connection.pas=</Transaction>
+    <Transaction>2010/04/18 16:23:35.718.pas,E:\delphi\JokerFramework\test\TestDataBase.pas=E:\delphi\JokerFramework\test\DataAcessLayer\TestDataBase.pas</Transaction>
+    <Transaction>2010/04/20 20:53:03.468.pas,E:\delphi\JokerFramework\Source\DataAcessLayer\DataBase.DbCommand.pas=</Transaction>
+    <Transaction>2010/04/20 20:53:12.765.pas,E:\delphi\JokerFramework\test\TestDbCommand.pas=E:\delphi\JokerFramework\test\DataAcessLayer\TestDbCommand.pas</Transaction>
+    <Transaction>2010/04/23 13:03:15.046.pas,E:\delphi\JokerFramework\test\JDbDataReader.pas=E:\delphi\JokerFramework\test\TestJDbDataReader.pas</Transaction>
+    <Transaction>2010/04/23 13:03:29.937.pas,E:\delphi\JokerFramework\test\DataAcessLayer\TestDbCommand.pas=E:\delphi\JokerFramework\test\DataAcessLayer\TestJDbCommand.pas</Transaction>
+    <Transaction>2010/04/23 13:03:36.484.pas,E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DataBase.JDbDataReader.pas=</Transaction>
+    <Transaction>2010/04/23 13:03:57.531.pas,E:\delphi\JokerFramework\test\DataAcessLayer\TestDataBase.pas=E:\delphi\JokerFramework\test\DataAcessLayer\TestJDbConnection.pas</Transaction>
+    <Transaction>2010/04/23 13:05:39.265.pas,E:\delphi\JokerFramework\test\DataAcessLayer\TestJDbCommand.pas=E:\delphi\JokerFramework\test\DataAcessLayer\JDbCommandTests.pas</Transaction>
+    <Transaction>2010/04/23 13:05:50.359.pas,E:\delphi\JokerFramework\test\DataAcessLayer\TestJDbConnection.pas=E:\delphi\JokerFramework\test\DataAcessLayer\JDbConnectionTests.pas</Transaction>
+    <Transaction>2010/04/23 13:06:00.828.pas,E:\delphi\JokerFramework\test\TestJDbDataReader.pas=E:\delphi\JokerFramework\test\JDbDataReaderTests.pas</Transaction>
+    <Transaction>2010/04/23 13:06:07.890.pas,E:\delphi\JokerFramework\test\JDbDataReaderTests.pas=E:\delphi\JokerFramework\test\DataAcessLayer\JDbDataReaderTests.pas</Transaction>
+    <Transaction>2010/05/01 18:38:46.171.pas,E:\delphi\JokerFramework\test\TestDataBase.pas=E:\delphi\JokerFramework\test\DataBase.CoreTests.pas</Transaction>
+    <Transaction>2010/05/01 18:38:53.875.pas,E:\delphi\JokerFramework\Source\DataAcessLayer\DataBase.Core.pas=</Transaction>
+    <Transaction>2010/05/01 19:27:08.062.pas,E:\delphi\JokerFramework\test\DataBase.CoreTests.pas=E:\delphi\JokerFramework\test\DataAcessLayer\DataBase.CoreTests.pas</Transaction>
+    <Transaction>2010/05/07 12:42:43.500.pas,E:\delphi\JokerFramework\Source\DataAcessLayer\DataBase.DataSet.pas=</Transaction>
+    <Transaction>2010/05/07 12:49:21.640.pas,E:\delphi\JokerFramework\test\DataAcessLayer\DataBase.CoreTests.pas=E:\delphi\JokerFramework\test\DataAcessLayer\DataBase.AnotacaoTests.pas</Transaction>
+    <Transaction>2010/05/07 12:49:58.421.pas,E:\delphi\JokerFramework\test\DataAcessLayer\JDbCommandTests.pas=E:\delphi\JokerFramework\test\DataAcessLayer\Database.JDbCommandTests.pas</Transaction>
+    <Transaction>2010/05/07 12:50:08.468.pas,E:\delphi\JokerFramework\test\DataAcessLayer\JDbConnectionTests.pas=E:\delphi\JokerFramework\test\DataAcessLayer\Database.JDbConnectionTests.pas</Transaction>
+    <Transaction>2010/05/07 12:50:16.890.pas,E:\delphi\JokerFramework\test\DataAcessLayer\JDbDataReaderTests.pas=E:\delphi\JokerFramework\test\DataAcessLayer\Database.JDbDataReaderTests.pas</Transaction>
+    <Transaction>2010/05/07 12:50:40.015.pas,E:\delphi\JokerFramework\Source\DataAcessLayer\DataBase.Mensagens.pas=</Transaction>
+    <Transaction>2010/05/07 12:50:50.093.pas,E:\delphi\JokerFramework\Source\DataAcessLayer\DataBase.Interfaces.pas=</Transaction>
+    <Transaction>2010/05/08 21:53:17.000.pas,E:\delphi\JokerFramework\Source\DataAcessLayer\DataBase.Anotacao.pas=E:\delphi\JokerFramework\Source\DataAcessLayer\DataBase.Annotation.pas</Transaction>
+    <Transaction>2010/05/08 21:53:42.828.pas,E:\delphi\JokerFramework\test\DataAcessLayer\DataBase.AnotacaoTests.pas=E:\delphi\JokerFramework\test\DataAcessLayer\DataBase.AnnotationTests.pas</Transaction>
+  </Transactions>
+</BorlandProject>

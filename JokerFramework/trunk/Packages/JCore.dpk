@@ -1,0 +1,58 @@
+package JCore;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+{$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$DEFINE DEBUG}
+
+requires
+  rtl,
+  dbrtl,
+  vcl;
+
+contains
+  JBase in '..\Source\JBase.pas',
+  System.Interfaces in '..\Source\Core\System.Interfaces.pas',
+  System.Base in '..\Source\Core\System.Base.pas',
+  System.Common in '..\Source\Core\System.Common.pas',
+  DataBase.Mensagens in '..\Source\DataAcessLayer\DataBase.Mensagens.pas',
+  DataBase.Annotation in '..\Source\DataAcessLayer\DataBase.Annotation.pas',
+  DataBase.Core in '..\Source\DataAcessLayer\DataBase.Core.pas',
+  DataBase.Interfaces in '..\Source\DataAcessLayer\DataBase.Interfaces.pas',
+  Gui.Core in '..\Source\GUI\Gui.Core.pas';
+
+end.

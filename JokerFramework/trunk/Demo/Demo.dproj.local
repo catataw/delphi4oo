@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2010/05/10 22:50:44.734.dproj,D:\Meus  Documentos\RAD Studio\Projects\Project1.dproj=E:\delphi\JokerFramework\Demo\Demo.dproj</Transaction>
+    <Transaction>2010/05/13 21:17:50.250.pas,E:\delphi\JokerFramework\Demo\Unit1.pas=E:\delphi\JokerFramework\Demo\source\UFrmPrincipal.pas</Transaction>
+    <Transaction>2010/05/13 21:17:50.250.dfm,E:\delphi\JokerFramework\Demo\Unit1.dfm=E:\delphi\JokerFramework\Demo\source\UFrmPrincipal.dfm</Transaction>
+    <Transaction>2010/05/13 21:30:14.953.pas,E:\delphi\JokerFramework\Demo\Unit1.pas=E:\delphi\JokerFramework\Demo\Controller\ControllerPrincipal.pas</Transaction>
+    <Transaction>2010/05/25 20:46:25.015.pas,E:\delphi\delphi4oo\JokerFramework\Demo\controllers\ControllerPrincipal.pas=E:\delphi\delphi4oo\JokerFramework\Demo\controllers\MainPrincipal.pas</Transaction>
+    <Transaction>2010/05/25 22:56:29.718.pas,E:\delphi\delphi4oo\JokerFramework\Demo\controllers\MainPrincipal.pas=E:\delphi\delphi4oo\JokerFramework\Demo\controllers\MainController.pas</Transaction>
+  </Transactions>
+</BorlandProject>

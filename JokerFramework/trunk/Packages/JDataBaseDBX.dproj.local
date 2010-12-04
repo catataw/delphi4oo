@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2010/04/18 11:17:15.703.dproj,D:\Meus  Documentos\RAD Studio\Projects\Package1.dproj=E:\delphi\JokerFramework\Packages\DataBaseDBX.dproj</Transaction>
+    <Transaction>2010/04/18 11:25:43.031.dproj,E:\delphi\JokerFramework\Packages\DataBaseDBX.dproj=E:\delphi\JokerFramework\Packages\JDataBaseDBX.dproj</Transaction>
+    <Transaction>2010/04/18 15:47:29.750.pas,E:\delphi\JokerFramework\Packages\Unit1.pas=E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DataBase.TransactionDBX.pas</Transaction>
+    <Transaction>2010/04/18 15:49:13.468.pas,E:\delphi\JokerFramework\Packages\Unit1.pas=E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DataBase.DbCommandDBX.pas</Transaction>
+    <Transaction>2010/04/18 15:49:56.250.pas,E:\delphi\JokerFramework\Source\DataBase.ConnectionDBX.pas=E:\delphi\JokerFramework\Source\ConnectionDBX.pas</Transaction>
+    <Transaction>2010/04/18 15:50:02.250.pas,E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DataBase.DbCommandDBX.pas=E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DbCommandDBX.pas</Transaction>
+    <Transaction>2010/04/18 15:50:10.328.pas,E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DataBase.TransactionDBX.pas=E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\TransactionDBX.pas</Transaction>
+    <Transaction>2010/04/18 15:50:21.921.pas,E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\TransactionDBX.pas=E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DataBase.TransactionDBX.pas</Transaction>
+    <Transaction>2010/04/18 15:50:29.812.pas,E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DbCommandDBX.pas=E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DataBase.DbCommandDBX.pas</Transaction>
+    <Transaction>2010/04/18 15:50:38.296.pas,E:\delphi\JokerFramework\Source\ConnectionDBX.pas=E:\delphi\JokerFramework\Source\DataBase.ConnectionDBX.pas</Transaction>
+    <Transaction>2010/04/18 15:53:05.453.pas,E:\delphi\JokerFramework\Packages\Unit1.pas=E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DataBase.DbDataReaderDBX.pas</Transaction>
+    <Transaction>2010/04/18 16:00:30.718.pas,E:\delphi\JokerFramework\Source\DataBase.ConnectionDBX.pas=E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DataBase.ConnectionDBX.pas</Transaction>
+    <Transaction>2010/04/21 22:44:20.515.pas,E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DataBase.DbDataReaderDBX.pas=E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DataBase.JDbDataReader.pas</Transaction>
+    <Transaction>2010/04/21 22:59:47.093.pas,E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DataBase.DbCommandDBX.pas=E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DataBase.JDbCommand.pas</Transaction>
+    <Transaction>2010/04/21 23:03:21.875.pas,E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DataBase.ConnectionDBX.pas=E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DataBase.JDbConnection.pas</Transaction>
+    <Transaction>2010/04/21 23:10:06.890.pas,E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DataBase.TransactionDBX.pas=E:\delphi\JokerFramework\Source\DataAcessLayer\DBX\DataBase.JDbTransaction.pas</Transaction>
+  </Transactions>
+</BorlandProject>

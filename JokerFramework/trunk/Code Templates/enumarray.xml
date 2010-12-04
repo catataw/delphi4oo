@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="enumarray" invoke="manual">
+		<description>
+			Enumerator class for a default array property, using a private nested enumerator class
+		</description>
+		<author>
+			Cobus Kruger
+		</author>
+		<point name="enumclass">
+			<text>
+				TNewEnumerator
+			</text>
+			<hint>
+				Name of new enumerator class
+			</hint>
+		</point>
+		<point name="listclass">
+			<text>
+				TListClass
+			</text>
+			<hint>
+				Name of a class with a default array property and a Count property
+			</hint>
+		</point>
+		<point name="itemclass">
+			<text>
+				TListItemClass
+			</text>
+			<hint>
+				Return type of the default array property
+			</hint>
+		</point>
+		<code language="Delphi" delimiter="|"><![CDATA[{$region '|*||*|Private eunumerator class'}
+|*|private
+|*||*|type
+|*||*||*||enumclass| = record
+|*||*||*|private
+|*||*||*||*|FIndex: Integer;
+|*||*||*||*|FOwner: |listclass|;
+|*||*||*|public
+|*||*||*||*|function GetCurrent: |itemclass|; inline;
+|*||*||*||*|function MoveNext: Boolean; inline;
+|*||*||*||*|property Current: |itemclass| read GetCurrent;
+
+|*||*||*||*|constructor Create(AOwner: |listclass|);
+|*||*||*|end;
+{$endregion}
+|*|public
+|*||*|function GetEnumerator: |enumclass|;
+
+// Move everything from here to the end of |listclass|.|enumclass|.MoveNext to the
+// implementation section
+function |listclass|.GetEnumerator: |enumclass|;
+begin
+|*|Result := |enumclass|.Create(Self);
+end;
+
+{ |listclass|.|enumclass| }
+
+constructor |listclass|.|enumclass|.Create(AOwner: |listclass|);
+begin
+|*|FIndex := -1;
+|*|FOwner := AOwner;
+end;
+
+function |listclass|.|enumclass|.GetCurrent: |itemclass|;
+begin
+|*|Result := |itemclass|(FOwner[FIndex]);
+end;
+
+function |listclass|.|enumclass|.MoveNext: Boolean;
+begin
+|*|Result := FIndex < FOwner.Count - 1;
+|*|if Result then
+|*||*|Inc(FIndex);
+end;
+ |end|]]>
+		</code>
+	</template>
+</codetemplate>

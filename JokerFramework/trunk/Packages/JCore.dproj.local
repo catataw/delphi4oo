@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2010/04/18 11:03:30.156.pas,E:\delphi\JokerFramework\Source\System.DataBase.pas=E:\delphi\JokerFramework\Source\DataBase.Core.pas</Transaction>
+    <Transaction>2010/04/18 11:04:47.703.pas,E:\delphi\JokerFramework\Packages\Unit1.pas=E:\delphi\JokerFramework\Source\DataBase.Conection.pas</Transaction>
+    <Transaction>2010/04/18 11:05:19.562.pas,E:\delphi\JokerFramework\Source\DataBase.Conection.pas=E:\delphi\JokerFramework\Source\DataBase.Connection.pas</Transaction>
+    <Transaction>2010/04/18 11:07:12.468.pas,E:\delphi\JokerFramework\Packages\Unit1.pas=E:\delphi\JokerFramework\Source\DataBase.Transaction.pas</Transaction>
+    <Transaction>2010/04/18 11:08:42.734.pas,E:\delphi\JokerFramework\Packages\Unit1.pas=E:\delphi\JokerFramework\Source\Unit1.pas</Transaction>
+    <Transaction>2010/04/18 11:09:01.312.pas,E:\delphi\JokerFramework\Source\Unit1.pas=E:\delphi\JokerFramework\Source\DataBase.DbCommand.pas</Transaction>
+    <Transaction>2010/04/18 11:10:49.093.pas,E:\delphi\JokerFramework\Source\System.DataBaseDBX.pas=E:\delphi\JokerFramework\Source\DataBase.ConnectionDBX.pas</Transaction>
+    <Transaction>2010/04/18 11:11:46.296.pas,E:\delphi\JokerFramework\Packages\Unit1.pas=E:\delphi\JokerFramework\Source\DataBase.DbDataReader.pas</Transaction>
+    <Transaction>2010/04/18 11:13:52.812.pas,E:\delphi\JokerFramework\Packages\Unit1.pas=E:\delphi\JokerFramework\Source\DataBase.Interfaces.pas</Transaction>
+    <Transaction>2010/04/18 11:17:34.125.pas,E:\delphi\JokerFramework\Source\DataBase.ConnectionDBX.pas=</Transaction>
+    <Transaction>2010/04/18 11:21:18.093.dproj,E:\delphi\JokerFramework\Packages\JokerFramework.dproj=E:\delphi\JokerFramework\Packages\JCore.dproj</Transaction>
+    <Transaction>2010/04/18 11:22:20.406.pas,E:\delphi\JokerFramework\Source\DataBase.Connection.pas=</Transaction>
+    <Transaction>2010/04/18 11:22:20.453.pas,E:\delphi\JokerFramework\Source\DataBase.Core.pas=</Transaction>
+    <Transaction>2010/04/18 11:22:20.468.pas,E:\delphi\JokerFramework\Source\DataBase.DbCommand.pas=</Transaction>
+    <Transaction>2010/04/18 11:22:20.515.pas,E:\delphi\JokerFramework\Source\DataBase.DbDataReader.pas=</Transaction>
+    <Transaction>2010/04/18 11:22:20.531.pas,E:\delphi\JokerFramework\Source\DataBase.Interfaces.pas=</Transaction>
+    <Transaction>2010/04/18 11:22:20.546.pas,E:\delphi\JokerFramework\Source\DataBase.Transaction.pas=</Transaction>
+    <Transaction>2010/04/18 11:43:40.625.pas,E:\delphi\JokerFramework\Source\System.DataBaseDataset.pas=</Transaction>
+    <Transaction>2010/04/18 15:59:52.218.pas,E:\delphi\JokerFramework\Source\System.Base.pas=E:\delphi\JokerFramework\Source\Core\System.Base.pas</Transaction>
+    <Transaction>2010/04/18 16:00:00.265.pas,E:\delphi\JokerFramework\Source\System.Interfaces.pas=E:\delphi\JokerFramework\Source\Core\System.Interfaces.pas</Transaction>
+    <Transaction>2010/04/18 16:00:08.078.pas,E:\delphi\JokerFramework\Source\System.Message.pas=E:\delphi\JokerFramework\Source\Core\System.Message.pas</Transaction>
+    <Transaction>2010/04/18 16:26:43.953.pas,E:\delphi\JokerFramework\Source\Core\System.Message.pas=</Transaction>
+    <Transaction>2010/05/01 17:47:21.406.pas,e:\delphi\jokerframework\Source\Core\System.Comon.pas=e:\delphi\jokerframework\Source\Core\System.Common.pas</Transaction>
+    <Transaction>2010/05/10 19:57:02.250.pas,E:\delphi\JokerFramework\Packages\Unit1.pas=E:\delphi\JokerFramework\Source\Core\JBase.pas</Transaction>
+    <Transaction>2010/05/10 21:44:41.843.pas,E:\delphi\JokerFramework\Source\Core\JBase.pas=E:\delphi\JokerFramework\Source\JBase.pas</Transaction>
+    <Transaction>2010/05/10 21:49:37.390.pas,E:\delphi\JokerFramework\Source\DataAcessLayer\DataBase.DataSet.pas=</Transaction>
+    <Transaction>2010/05/10 21:52:45.843.pas,E:\delphi\JokerFramework\Packages\Unit1.pas=E:\delphi\JokerFramework\Source\GUI\gui.Core.pas</Transaction>
+    <Transaction>2010/05/13 21:25:07.828.pas,E:\delphi\JokerFramework\Packages\Unit2.pas=E:\delphi\JokerFramework\Source\GUI\Gui.Controller.pas</Transaction>
+    <Transaction>2010/05/14 18:19:50.796.pas,E:\delphi\JokerFramework\Packages\Unit1.pas=E:\delphi\JokerFramework\Source\GUI\Gui.Interfaces.pas</Transaction>
+    <Transaction>2010/05/26 21:15:20.468.pas,E:\delphi\delphi4oo\JokerFramework\Source\GUI\Gui.Interfaces.pas=</Transaction>
+    <Transaction>2010/05/26 21:19:55.343.pas,E:\delphi\delphi4oo\JokerFramework\Source\Core\System.Rtti.pas=</Transaction>
+    <Transaction>2010/05/27 20:28:54.843.pas,E:\delphi\delphi4oo\JokerFramework\Source\GUI\Gui.Controller.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

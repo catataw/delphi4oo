@@ -1,0 +1,42 @@
+package JDataBaseDBX;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+{$DEFINE DEBUG}
+{$DEFINE DEBUG}
+{$DEFINE DEBUG}
+
+requires
+  rtl,
+  JCore,
+  DBXFirebirdDriver;
+
+contains
+  DataBase.JDbTransaction in '..\Source\DataAcessLayer\DBX\DataBase.JDbTransaction.pas',
+  DataBase.JDbCommand in '..\Source\DataAcessLayer\DBX\DataBase.JDbCommand.pas',
+  DataBase.JDbConnection in '..\Source\DataAcessLayer\DBX\DataBase.JDbConnection.pas',
+  DataBase.JDbDataReader in '..\Source\DataAcessLayer\DBX\DataBase.JDbDataReader.pas';
+
+end.
+

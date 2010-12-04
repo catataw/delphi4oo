@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate xmlns="http://schemas.borland.com/Delphi/2005/codetemplates" version="1.0.0">
+   <template name="NewBucketList" invoke="manual">
+      <description>
+         Create a more type safe BucketList descendant
+      </description>
+      <author>
+         Adam Markowitz
+      </author>
+      <point name="classname">
+         <text>
+            TControlBucketList
+         </text>
+         <hint>
+            name of new BucketList class type
+         </hint>
+      </point>
+	  <point name="keytype">
+		 <text>
+			TControl
+		 </text>
+		 <hint>
+			BucketList data type
+		 </hint>
+	  </point>
+	  <point name="datatype">
+		 <text>
+			TControl
+		 </text>
+		 <hint>
+			BucketList data type
+		 </hint>
+	  </point>
+	  <code language="Delphi" delimiter="|"><![CDATA[type
+
+|*||classname| = class(TBucketList)
+|*|protected
+|*||*|function GetData(AItem: |keytype|): |datatype|;
+|*||*|procedure SetData(AItem: |keytype|; const AData: |datatype|);
+|*|public
+|*||*|property Data[AItem: |keytype|]: |datatype| read GetData write SetData; default;
+
+|*||*|function Add(AItem: |keytype|; AData: |datatype|): |datatype|;
+|*||*|function Remove(AItem: |keytype|): |datatype|;
+|*||*|function Exists(AItem: |keytype|): Boolean;
+|*||*|function Find(AItem: |keytype|; out AData: |datatype|): Boolean;
+|*|end;
+
+{ |classname| }
+
+function |classname|.Add(AItem: |keytype|; AData: |datatype|): |datatype|;
+begin
+|*|Result := |datatype|(inherited Add(Pointer(AItem), Pointer(AData)));
+end;
+
+function |classname|.GetData(AItem: |keytype|): |datatype|;
+begin
+|*|Result := |datatype|(inherited Data[Pointer(AItem)]);
+end;
+
+function |classname|.Remove(AItem: |keytype|): |datatype|;
+begin
+|*|Result := |datatype|(inherited Remove(Pointer(AItem)));
+end;
+
+function |classname|.Exists(AItem: |keytype|): Boolean;
+begin
+|*|Result := inherited Exists(Pointer(AItem));
+end;
+
+function |classname|.Find(AItem: |keytype|; out AData: |datatype|): Boolean;
+begin
+|*|Result := inherited Find(Pointer(AItem), Pointer(AData));
+end;
+
+procedure |classname|.SetData(AItem: |keytype|; const AData: |datatype|);
+begin
+|*|inherited Data[Pointer(AItem)] := Pointer(AData);
+end;]]>
+	  </code>
+   </template>
+</codetemplate>
+
+

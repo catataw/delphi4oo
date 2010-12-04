@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="enumarraypublic" invoke="manual">
+		<description>
+			Enumerator class for a default array property, using a publicly-accessible enumerator class
+		</description>
+		<author>
+			Cobus Kruger
+		</author>
+		<point name="enumclass">
+			<text>
+				TNewEnumerator
+			</text>
+			<hint>
+				name of new enumerator class
+			</hint>
+		</point>
+		<point name="listclass">
+			<text>
+				TListClass
+			</text>
+			<hint>
+				name of a class with a default array property and a Count property
+			</hint>
+		</point>
+		<point name="itemclass">
+			<text>
+				TListItemClass
+			</text>
+			<hint>
+				return type of the default array property
+			</hint>
+		</point>
+		<code language="Delphi" delimiter="|"><![CDATA[|*||enumclass| = class; // Place before the declaration of |listclass|
+|*||*|function GetEnumerator: |enumclass|; // Move to the public section of |listclass|
+
+|*||enumclass| = class
+|*|private
+|*||*|FIndex: Integer;
+|*||*|FOwner: |listclass|;
+|*|public
+|*||*|function GetCurrent: |itemclass|;
+|*||*|function MoveNext: Boolean;
+|*||*|property Current: |itemclass| read GetCurrent;
+
+|*||*|constructor Create(AOwner: |listclass|);
+|*|end;
+
+// Move everything from here to the end of |enumclass|.MoveNext to the
+// implementation section
+function |listclass|.GetEnumerator: |enumclass|;
+begin
+|*|Result := |enumclass|.Create(Self);
+end;
+
+{ |enumclass| }
+
+constructor |enumclass|.Create(AOwner: |listclass|);
+begin
+|*|inherited Create;
+|*|FIndex := -1;
+|*|FOwner := AOwner;
+end;
+
+function |enumclass|.GetCurrent: |itemclass|;
+begin
+|*|Result := |itemclass|(FOwner[FIndex]);
+end;
+
+function |enumclass|.MoveNext: Boolean;
+begin
+|*|Result := FIndex < FOwner.Count - 1;
+|*|if Result then
+|*||*|Inc(FIndex);
+end;
+]]>
+		</code>
+	</template>
+</codetemplate>
