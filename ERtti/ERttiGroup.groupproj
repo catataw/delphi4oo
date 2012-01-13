@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{0910A560-4E11-41F4-8AFC-F168BC895ED9}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="ERtti.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Test\ERttiTests.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="ERtti">
+			<MSBuild Projects="ERtti.dproj"/>
+		</Target>
+		<Target Name="ERtti:Clean">
+			<MSBuild Projects="ERtti.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="ERtti:Make">
+			<MSBuild Projects="ERtti.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="ERttiTests">
+			<MSBuild Projects="Test\ERttiTests.dproj"/>
+		</Target>
+		<Target Name="ERttiTests:Clean">
+			<MSBuild Projects="Test\ERttiTests.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="ERttiTests:Make">
+			<MSBuild Projects="Test\ERttiTests.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="ERtti;ERttiTests"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="ERtti:Clean;ERttiTests:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="ERtti:Make;ERttiTests:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>
